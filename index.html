@@ -1,714 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Smoke Shop | Demo Landing Page</title>
+  <title>The Smoke Shop | Premium Lifestyle Store</title>
 
-    <meta name="description"
-          content="The Smoke Shop - Demo project showcasing a premium lifestyle store landing page.">
+  <meta name="description"
+     content="The Smoke Shop — premium selections and a refined store experience.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+     rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= AGE VERIFICATION ================= -->
+<!-- AGE VERIFICATION -->
 
 <div class="age-screen" id="ageScreen">
 
-    <div class="age-box">
+  <div class="age-box">
 
-        <div class="age-symbol">18+</div>
+    <div class="age-symbol">18+</div>
 
-        <p class="eyebrow">THE SMOKE SHOP</p>
+    <p class="eyebrow">THE SMOKE SHOP</p>
 
-        <h2>Age Confirmation</h2>
+    <h2>Age Confirmation</h2>
 
-        <p>
-            This is a demo website. Please confirm that you are
-            of legal age to view this sample project.
-        </p>
+    <p>
+      Please confirm that you are of legal age to view this website.
+    </p>
 
-        <div class="age-buttons">
+    <div class="age-buttons">
 
-            <button class="btn gold-btn" id="enterBtn">
-                I AM OF LEGAL AGE
-            </button>
+      <button class="btn gold-btn" id="enterBtn">
+        I AM OF LEGAL AGE
+      </button>
 
-            <button class="btn outline-btn" id="exitBtn">
-                EXIT
-            </button>
-
-        </div>
+      <button class="btn outline-btn" id="exitBtn">
+        EXIT
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header class="header" id="header">
 
-    <a href="#home" class="text-logo">
-        <span>THE</span>
-        <strong>SMOKE SHOP</strong>
-        <small>DEMO PROJECT</small>
+  <a href="#home" class="text-logo">
+    <span>THE</span>
+    <strong>SMOKE SHOP</strong>
+  </a>
+
+  <nav class="nav" id="nav">
+
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#collections">Collections</a>
+    <a href="#store">Inside Our Store</a>
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</header>
+
+
+<!-- FULL SCREEN SMOKE HERO -->
+
+<section class="hero hero-banner" id="home" aria-label="The Smoke Shop">
+
+  <video
+    class="hero-smoke-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+  >
+    <source src="videos/smoke.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-brand-overlay">
+
+    <img
+      src="images/smoke-shop-logo.png"
+      alt="The Smoke Shop"
+      class="hero-brand-logo"
+    >
+
+  
+
+  </div>
+
+  <div class="scroll-down">
+    <span></span>
+    SCROLL
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+  <div class="section-label">
+    <span>01</span>
+    ABOUT US
+  </div>
+
+  <div class="about-grid">
+
+    <div class="about-image">
+
+      <img src="images/about.jpg" alt="The Smoke Shop">
+
+      <div class="about-badge">
+        <strong>THE</strong>
+        <span>SMOKE</span>
+        <small>SHOP</small>
+      </div>
+
+    </div>
+
+    <div class="about-content">
+
+      <p class="eyebrow">
+        WELCOME TO OUR WORLD
+      </p>
+
+      <h2>
+        More Than A
+        <span>Smoke Shop.</span>
+      </h2>
+
+      <p>
+        Welcome to your destination for premium cigarettes,
+        a wide range of products, and an array of shisha and
+        shisha flavours for hookah enthusiasts.
+      </p>
+
+      <p>
+        We're dedicated to enhancing your smoking experience.
+        But we don't stop there.
+      </p>
+
+      <p>
+        Indulge in exquisite imported chocolate and discover
+        a carefully selected range of products designed to
+        complement your lifestyle.
+      </p>
+
+      <a href="#collections" class="text-link">
+        DISCOVER OUR COLLECTIONS
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+
+<section class="section collections" id="collections">
+
+  <div class="section-heading">
+
+    <div class="section-label center">
+      <span>02</span>
+      OUR COLLECTIONS
+    </div>
+
+    <h2>
+      Curated For
+      <span>Every Taste.</span>
+    </h2>
+
+    <p>
+      Explore our carefully selected range.
+    </p>
+
+  </div>
+
+  <div class="collection-grid">
+
+    <article class="collection-card">
+
+      <div class="card-number">01</div>
+
+      <div class="collection-image">
+        <img src="images/cigarettes.jpg" alt="Premium Cigarettes">
+      </div>
+
+      <div class="collection-content">
+
+        <p class="collection-label">
+          PREMIUM SELECTION
+        </p>
+
+        <h3>Premium Cigarettes</h3>
+
+        <p>
+          Discover our curated selection of premium
+          cigarette products.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="collection-card">
+
+      <div class="card-number">02</div>
+
+      <div class="collection-image">
+        <img src="images/shisha.jpg" alt="Shisha and Flavours">
+      </div>
+
+      <div class="collection-content">
+
+        <p class="collection-label">
+          HOOKAH EXPERIENCE
+        </p>
+
+        <h3>Shisha & Flavours</h3>
+
+        <p>
+          Explore our selection of shisha and flavours
+          for hookah enthusiasts.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="collection-card">
+
+      <div class="card-number">03</div>
+
+      <div class="collection-image">
+        <img src="images/chocolate.jpg" alt="Imported Chocolates">
+      </div>
+
+      <div class="collection-content">
+
+        <p class="collection-label">
+          IMPORTED SELECTION
+        </p>
+
+        <h3>Imported Chocolates</h3>
+
+        <p>
+          Indulge in exquisite imported chocolate
+          selections.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- INSIDE OUR STORE -->
+
+<section class="section store-section" id="store">
+
+  <div class="section-heading">
+
+    <div class="section-label center">
+      <span>03</span>
+      INSIDE OUR STORE
+    </div>
+
+    <h2>
+      A Closer Look
+      <span>Inside.</span>
+    </h2>
+
+    <p>
+      Explore a glimpse of our carefully selected products
+      and store experience.
+    </p>
+
+  </div>
+
+  <div class="store-gallery">
+
+    <div class="store-item large">
+      <img src="images/store1.jpg" alt="The Smoke Shop Product">
+    </div>
+
+    <div class="store-item">
+      <img src="images/store2.jpg" alt="The Smoke Shop Product">
+    </div>
+
+    <div class="store-item">
+      <img src="images/store3.jpg" alt="The Smoke Shop Product">
+    </div>
+
+    <div class="store-item large">
+      <img src="images/store4.jpg" alt="The Smoke Shop Product">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="section experience">
+
+  <div class="experience-content">
+
+    <p class="eyebrow">
+      THE EXPERIENCE
+    </p>
+
+    <h2>
+      Discover.
+      <span>Explore.</span>
+      Enjoy.
+    </h2>
+
+    <p>
+      Step into a destination where premium selections meet
+      a refined atmosphere. From shisha flavours and premium
+      products to imported treats, there's something distinctive
+      waiting to be discovered.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+
+        <span>✦</span>
+
+        <div>
+          <h4>CURATED SELECTION</h4>
+          <p>Carefully selected products.</p>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <span>✦</span>
+
+        <div>
+          <h4>PREMIUM EXPERIENCE</h4>
+          <p>A refined store atmosphere.</p>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <span>✦</span>
+
+        <div>
+          <h4>QUALITY SELECTION</h4>
+          <p>A welcoming store experience.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="experience-image">
+    <img src="images/store4.jpg" alt="The Smoke Shop">
+  </div>
+
+</section>
+
+
+<!-- GOOGLE REVIEW -->
+
+<section class="section review">
+
+  <div class="review-box">
+
+    <div class="quote-mark">"</div>
+
+    <p class="eyebrow">
+      YOUR FEEDBACK MATTERS
+    </p>
+
+    <h2>
+      Visited Us?
+      <span>Tell Us.</span>
+    </h2>
+
+    <p>
+      Share your experience with us. Your feedback helps us serve you better.
+    </p>
+
+    <a href="#" class="btn gold-btn">
+      LEAVE A REVIEW ★
     </a>
 
-    <nav class="nav" id="nav">
+  </div>
 
-        <a href="#home">Home</a>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+  <div class="section-label">
+    <span>04</span>
+    FIND US
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-content">
+
+      <p class="eyebrow">
+        COME VISIT
+      </p>
+
+      <h2>
+        Let's Connect
+        <span>In Person.</span>
+      </h2>
+
+      <p>
+        Get in touch with our team for store information and assistance.
+      </p>
+
+      <div class="contact-details">
+
+        <a href="#" class="contact-item">
+
+          <div class="contact-icon">☎</div>
+
+          <div>
+            <small>CALL US</small>
+            <strong>+91 00000 00000</strong>
+          </div>
+
+        </a>
+
+        <a href="#" class="contact-item">
+
+          <div class="contact-icon">◉</div>
+
+          <div>
+            <small>WHATSAPP</small>
+            <strong>Chat With Us</strong>
+          </div>
+
+        </a>
+
+        <a href="#" class="contact-item">
+
+          <div class="contact-icon">◎</div>
+
+          <div>
+            <small>INSTAGRAM</small>
+            <strong>@yourstore_handle</strong>
+          </div>
+
+        </a>
+
+      </div>
+
+      <a href="#" class="btn gold-btn">
+        GET DIRECTIONS
+      </a>
+
+    </div>
+
+    <a href="#" class="location-card">
+
+      <img src="images/location.jpg" alt="Store location">
+
+      <div class="location-overlay">
+
+        <div class="map-pin">●</div>
+
+        <h3>THE SMOKE SHOP</h3>
+
+        <p>Visit Our Store</p>
+
+        <span>
+          OPEN IN GOOGLE MAPS →
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-brand">
+
+      <a href="#home" class="text-logo">
+        <span>THE</span>
+        <strong>SMOKE SHOP</strong>
+      </a>
+
+      <p>
+        A destination for premium selections and a refined lifestyle experience.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+
+        <h4>EXPLORE</h4>
+
         <a href="#about">About</a>
         <a href="#collections">Collections</a>
         <a href="#store">Inside Our Store</a>
         <a href="#contact">Contact</a>
 
-    </nav>
+      </div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+      <div>
 
-</header>
+        <h4>CONNECT</h4>
 
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Google Review</a>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <p class="eyebrow reveal">
-            DEMO PROJECT
-        </p>
-
-        <h1 class="reveal">
-            The Art Of
-            <span>Indulgence.</span>
-        </h1>
-
-        <p class="hero-text reveal">
-
-            Discover a curated destination featuring premium
-            cigarettes, shisha and flavours, imported chocolates
-            and distinctive lifestyle selections.
-
-        </p>
-
-        <div class="hero-buttons reveal">
-
-            <a href="#collections"
-               class="btn gold-btn">
-                EXPLORE COLLECTION
-            </a>
-
-            <a href="#contact"
-               class="btn outline-btn">
-                CONTACT US
-            </a>
-
-        </div>
-
-        <div class="hero-meta reveal">
-
-            <span>✦ PREMIUM SELECTION</span>
-            <span>✦ DEMO PROJECT</span>
-            <span>✦ SAMPLE STORE</span>
-
-        </div>
+      </div>
 
     </div>
 
+  </div>
 
-    <!-- HERO IMAGE + SMOKE -->
+  <div class="footer-bottom">
 
-    <div class="hero-visual">
+    <p>
+      © <span id="year"></span>
+      The Smoke Shop.
+      All rights reserved.
+    </p>
 
-        <div class="hero-image">
+    <p>
+      Designed for a refined store experience.
+    </p>
 
-            <img src="images/hero.jpg"
-                 alt="The Smoke Shop">
-
-            <div class="hero-smoke smoke-1"></div>
-            <div class="hero-smoke smoke-2"></div>
-            <div class="hero-smoke smoke-3"></div>
-            <div class="hero-smoke smoke-4"></div>
-            <div class="hero-smoke smoke-5"></div>
-            <div class="hero-smoke smoke-6"></div>
-            <div class="hero-smoke smoke-7"></div>
-            <div class="hero-smoke smoke-8"></div>
-            <div class="hero-smoke smoke-9"></div>
-            <div class="hero-smoke smoke-10"></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="scroll-down">
-
-        <span></span>
-        SCROLL
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="section about" id="about">
-
-    <div class="section-label">
-        <span>01</span>
-        ABOUT US
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-image">
-
-            <img src="images/about.jpg"
-                 alt="The Smoke Shop">
-
-            <div class="about-badge">
-
-                <strong>THE</strong>
-                <span>SMOKE</span>
-                <small>SHOP</small>
-
-            </div>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <p class="eyebrow">
-                WELCOME TO OUR WORLD
-            </p>
-
-            <h2>
-                More Than A
-                <span>Smoke Shop.</span>
-            </h2>
-
-            <p>
-                Welcome to your destination for premium cigarettes,
-                a wide range of products, and an array of shisha and
-                shisha flavours for hookah enthusiasts.
-            </p>
-
-            <p>
-                We're dedicated to enhancing your smoking experience.
-                But we don't stop there.
-            </p>
-
-            <p>
-                Indulge in exquisite imported chocolate and discover
-                a carefully selected range of products designed to
-                complement your lifestyle.
-            </p>
-
-            <a href="#collections" class="text-link">
-                DISCOVER OUR COLLECTIONS
-                <span>→</span>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= COLLECTIONS ================= -->
-
-<section class="section collections" id="collections">
-
-    <div class="section-heading">
-
-        <div class="section-label center">
-            <span>02</span>
-            OUR COLLECTIONS
-        </div>
-
-        <h2>
-            Curated For
-            <span>Every Taste.</span>
-        </h2>
-
-        <p>
-            Explore our carefully selected range.
-        </p>
-
-    </div>
-
-
-    <div class="collection-grid">
-
-        <article class="collection-card">
-
-            <div class="card-number">01</div>
-
-            <div class="collection-image">
-
-                <img src="images/cigarettes.jpg"
-                     alt="Premium Cigarettes">
-
-            </div>
-
-            <div class="collection-content">
-
-                <p class="collection-label">
-                    PREMIUM SELECTION
-                </p>
-
-                <h3>
-                    Premium Cigarettes
-                </h3>
-
-                <p>
-                    Discover our curated selection of premium
-                    cigarette products.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <article class="collection-card">
-
-            <div class="card-number">02</div>
-
-            <div class="collection-image">
-
-                <img src="images/shisha.jpg"
-                     alt="Shisha and Flavours">
-
-            </div>
-
-            <div class="collection-content">
-
-                <p class="collection-label">
-                    HOOKAH EXPERIENCE
-                </p>
-
-                <h3>
-                    Shisha & Flavours
-                </h3>
-
-                <p>
-                    Explore our selection of shisha and flavours
-                    for hookah enthusiasts.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <article class="collection-card">
-
-            <div class="card-number">03</div>
-
-            <div class="collection-image">
-
-                <img src="images/chocolate.jpg"
-                     alt="Imported Chocolates">
-
-            </div>
-
-            <div class="collection-content">
-
-                <p class="collection-label">
-                    IMPORTED SELECTION
-                </p>
-
-                <h3>
-                    Imported Chocolates
-                </h3>
-
-                <p>
-                    Indulge in exquisite imported chocolate
-                    selections.
-                </p>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= INSIDE OUR STORE ================= -->
-
-<section class="section store-section" id="store">
-
-    <div class="section-heading">
-
-        <div class="section-label center">
-            <span>03</span>
-            INSIDE OUR STORE
-        </div>
-
-        <h2>
-            A Closer Look
-            <span>Inside.</span>
-        </h2>
-
-        <p>
-            Explore a glimpse of our carefully selected products
-            and store experience.
-        </p>
-
-    </div>
-
-
-    <div class="store-gallery">
-
-        <div class="store-item large">
-            <img src="images/store1.jpg"
-                 alt="The Smoke Shop Product">
-        </div>
-
-        <div class="store-item">
-            <img src="images/store2.jpg"
-                 alt="The Smoke Shop Product">
-        </div>
-
-        <div class="store-item">
-            <img src="images/store3.jpg"
-                 alt="The Smoke Shop Product">
-        </div>
-
-        <div class="store-item large">
-            <img src="images/store4.jpg"
-                 alt="The Smoke Shop Product">
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EXPERIENCE ================= -->
-
-<section class="section experience">
-
-    <div class="experience-content">
-
-        <p class="eyebrow">
-            THE EXPERIENCE
-        </p>
-
-        <h2>
-            Discover.
-            <span>Explore.</span>
-            Enjoy.
-        </h2>
-
-        <p>
-            Step into a destination where premium selections meet
-            a refined atmosphere. From shisha flavours and premium
-            products to imported treats, there's something distinctive
-            waiting to be discovered.
-        </p>
-
-
-        <div class="features">
-
-            <div class="feature">
-
-                <span>✦</span>
-
-                <div>
-                    <h4>CURATED SELECTION</h4>
-                    <p>Carefully selected products.</p>
-                </div>
-
-            </div>
-
-
-            <div class="feature">
-
-                <span>✦</span>
-
-                <div>
-                    <h4>PREMIUM EXPERIENCE</h4>
-                    <p>A refined store atmosphere.</p>
-                </div>
-
-            </div>
-
-
-            <div class="feature">
-
-                <span>✦</span>
-
-                <div>
-                    <h4>DEMO PROJECT</h4>
-                    <p>Sample landing page design.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="experience-image">
-
-        <img src="images/store4.jpg"
-             alt="The Smoke Shop">
-
-    </div>
-
-</section>
-
-
-<!-- ================= GOOGLE REVIEW ================= -->
-
-<section class="section review">
-
-    <div class="review-box">
-
-        <div class="quote-mark">"</div>
-
-        <p class="eyebrow">
-            YOUR FEEDBACK MATTERS
-        </p>
-
-        <h2>
-            Visited Us?
-            <span>Tell Us.</span>
-        </h2>
-
-        <p>
-            This is a demo section showcasing a review call-to-action
-            for a lifestyle store landing page.
-        </p>
-
-        <a href="#"
-           class="btn gold-btn">
-            LEAVE A REVIEW ★
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="section contact" id="contact">
-
-    <div class="section-label">
-        <span>04</span>
-        FIND US
-    </div>
-
-
-    <div class="contact-grid">
-
-        <div class="contact-content">
-
-            <p class="eyebrow">
-                COME VISIT
-            </p>
-
-            <h2>
-                Let's Connect
-                <span>In Person.</span>
-            </h2>
-
-            <p>
-                This is a demo contact section. In a real deployment,
-                this would show the store's actual contact details.
-            </p>
-
-
-            <div class="contact-details">
-
-                <!-- DEMO PHONE -->
-
-                <a href="#"
-                   class="contact-item">
-
-                    <div class="contact-icon">☎</div>
-
-                    <div>
-                        <small>CALL US</small>
-                        <strong>+91 00000 00000</strong>
-                    </div>
-
-                </a>
-
-
-                <!-- DEMO WHATSAPP -->
-
-                <a href="#"
-                   class="contact-item">
-
-                    <div class="contact-icon">◉</div>
-
-                    <div>
-                        <small>WHATSAPP</small>
-                        <strong>Chat With Us</strong>
-                    </div>
-
-                </a>
-
-
-                <!-- DEMO INSTAGRAM -->
-
-                <a href="#"
-                   class="contact-item">
-
-                    <div class="contact-icon">◎</div>
-
-                    <div>
-                        <small>INSTAGRAM</small>
-                        <strong>@yourstore_handle</strong>
-                    </div>
-
-                </a>
-
-            </div>
-
-
-            <!-- DEMO MAP -->
-
-            <a href="#"
-               class="btn gold-btn">
-
-                GET DIRECTIONS
-
-            </a>
-
-        </div>
-
-
-        <!-- DEMO LOCATION CARD -->
-
-        <a href="#"
-           class="location-card">
-
-            <img src="images/location.jpg"
-                 alt="Store location">
-
-            <div class="location-overlay">
-
-                <div class="map-pin">●</div>
-
-                <h3>THE SMOKE SHOP</h3>
-
-                <p>Demo Location</p>
-
-                <span>
-                    OPEN IN GOOGLE MAPS →
-                </span>
-
-            </div>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="footer-top">
-
-        <div class="footer-brand">
-
-            <a href="#home" class="text-logo">
-                <span>THE</span>
-                <strong>SMOKE SHOP</strong>
-                <small>DEMO PROJECT</small>
-            </a>
-
-            <p>
-                A demo landing page for a premium lifestyle store concept.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <div>
-
-                <h4>EXPLORE</h4>
-
-                <a href="#about">About</a>
-                <a href="#collections">Collections</a>
-                <a href="#store">Inside Our Store</a>
-                <a href="#contact">Contact</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>CONNECT</h4>
-
-                <a href="#">Instagram</a>
-
-                <a href="#">WhatsApp</a>
-
-                <a href="#">Google Review</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © <span id="year"></span>
-            The Smoke Shop — Demo Project.
-            All rights reserved.
-        </p>
-
-        <p>
-            This is a demo website built for portfolio purposes.
-        </p>
-
-    </div>
+  </div>
 
 </footer>
 
 
-<!-- ================= FLOATING WHATSAPP ================= -->
+<!-- FLOATING WHATSAPP -->
 
-<a href="#"
-   class="floating-whatsapp">
-
-    ◉
-
+<a href="#" class="floating-whatsapp">
+  ◉
 </a>
 
 

@@ -4,34 +4,22 @@ const ageScreen = document.getElementById("ageScreen");
 const enterBtn = document.getElementById("enterBtn");
 const exitBtn = document.getElementById("exitBtn");
 
-document.body.classList.add("locked");
-
-if (
-    localStorage.getItem("smokeShopAgeVerified") === "true"
-) {
-    ageScreen.classList.add("hide");
-    document.body.classList.remove("locked");
+if (ageScreen) {
+    document.body.classList.add("locked");
 }
 
-enterBtn.addEventListener("click", () => {
+if (enterBtn) {
+    enterBtn.addEventListener("click", () => {
+        ageScreen.classList.add("hide");
+        document.body.classList.remove("locked");
+    });
+}
 
-    ageScreen.classList.add("hide");
-
-    document.body.classList.remove("locked");
-
-    localStorage.setItem(
-        "smokeShopAgeVerified",
-        "true"
-    );
-
-});
-
-exitBtn.addEventListener("click", () => {
-
-    window.location.href =
-        "https://www.google.com";
-
-});
+if (exitBtn) {
+    exitBtn.addEventListener("click", () => {
+        window.location.href = "about:blank";
+    });
+}
 
 
 // ================= MOBILE MENU =================
@@ -39,119 +27,124 @@ exitBtn.addEventListener("click", () => {
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn && nav) {
 
-    nav.classList.toggle("active");
-
-});
-
-document.querySelectorAll(".nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("active");
-
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
     });
 
-});
+    nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+
+}
 
 
 // ================= HEADER SCROLL =================
 
 const header = document.getElementById("header");
 
-window.addEventListener("scroll", () => {
+function updateHeader() {
 
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+    if (header) {
+        header.classList.toggle("scrolled", window.scrollY > 40);
     }
 
+}
+
+window.addEventListener("scroll", updateHeader, {
+    passive: true
 });
 
+updateHeader();
 
-// ================= YEAR =================
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+// ================= CURRENT YEAR =================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
 
 
 // ================= SCROLL REVEAL =================
 
-const revealItems = document.querySelectorAll(
-    ".about-grid, " +
-    ".collection-card, " +
-    ".store-item, " +
-    ".experience-content, " +
-    ".experience-image, " +
-    ".review-box, " +
-    ".contact-content, " +
-    ".location-card"
-);
+const revealItems = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-    (entries, observer) => {
+if ("IntersectionObserver" in window) {
 
-        entries.forEach(entry => {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
 
-            if (entry.isIntersecting) {
+            entries.forEach((entry) => {
 
-                entry.target.classList.add("visible");
+                if (entry.isIntersecting) {
 
-                entry.target.style.opacity = "1";
+                    entry.target.classList.add("visible");
 
-                entry.target.style.transform =
-                    "translateY(0)";
+                    observer.unobserve(entry.target);
 
-                observer.unobserve(entry.target);
+                }
 
-            }
+            });
 
-        });
+        },
+        {
+            threshold: 0.12
+        }
+    );
 
-    },
-    {
-        threshold: 0.12
-    }
-);
+    revealItems.forEach((item) => {
+        revealObserver.observe(item);
+    });
 
-revealItems.forEach(item => {
+} else {
 
-    item.style.opacity = "0";
+    revealItems.forEach((item) => {
+        item.classList.add("visible");
+    });
 
-    item.style.transform =
-        "translateY(35px)";
+}
+// ================= HERO VIDEO SMOKE =================
 
-    item.style.transition =
-        "opacity .8s ease, transform .8s ease";
+const smokeVideo = document.querySelector(".hero-smoke-video");
 
-    observer.observe(item);
+if (smokeVideo) {
 
-});
+    smokeVideo.muted = true;
+
+    const playSmoke = () => {
+
+        const playPromise = smokeVideo.play();
+
+        if (playPromise !== undefined) {
+
+            playPromise.catch(() => {
+                console.log("Smoke video autoplay blocked.");
+            });
+
+        }
+
+    };
+
+    playSmoke();
+
+    document.addEventListener("visibilitychange", () => {
+
+        if (document.hidden) {
+            smokeVideo.pause();
+        } else {
+            playSmoke();
+        }
+
+    });
+
+}
 
 
-// ================= HERO PARALLAX =================
-
-const heroVisual =
-    document.querySelector(".hero-visual");
-
-window.addEventListener("mousemove", event => {
-
-    if (
-        !heroVisual ||
-        window.innerWidth < 900
-    ) {
-        return;
-    }
-
-    const x =
-        (window.innerWidth / 2 - event.clientX) / 100;
-
-    const y =
-        (window.innerHeight / 2 - event.clientY) / 100;
-
-    heroVisual.style.transform =
-        `translate(${x}px, ${y}px)`;
-
-});
+// ================= HERO MOUSE PARALLAX =================
+// New hero is a full-width image banner.
+// No mouse parallax is needed.
